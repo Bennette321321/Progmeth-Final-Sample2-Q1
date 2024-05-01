@@ -214,6 +214,9 @@ public class Main {
 			//A1. Accept a string input with sc.nextLine()
 			//A2. Attempt to parse the string into an int (the try/catch will handle bad cases automatically)
 			//A3. Use the int from step A2 to get a Sellable object from the ArrayList called shop
+			String s = sc.nextLine();
+			int index = Integer.parseInt(s);
+			Sellable toBuy = shop.get(index);
 			
 			System.out.println("Please choose the quantity of the items you want to buy.");
 			
@@ -222,6 +225,10 @@ public class Main {
 			//B2. Attempt to parse the string into an int (the try/catch will handle bad cases automatically)
 			//B3. Use the Sellable from step A3 and the quantity from step B2 to initialize a new BillItem
 			//B4. Add the BillItem in step B3 to bill.itemsInBill
+			String s2 = sc.nextLine();
+			int quantity = Integer.parseInt(s2);
+			BillItem newBillItem = new BillItem(toBuy, quantity);
+			bill.itemsInBill.add(newBillItem);
 			
 			//If you wrote this function correctly, then you should be able to correctly add items to your bill
 			
